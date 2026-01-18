@@ -1,0 +1,40 @@
+{
+  "id": "panduan-tindak-lanjut",
+  "title": "Panduan Analisa & Tindak Lanjut Kondisi Equipment",
+  "tags": ["SOP", "Tindak Lanjut", "Action Plan", "Alarm", "High", "Normal", "Rekomendasi"],
+  "level": "Intermediate",
+  "source": "Best Practice MCSA/ESA & ATPOLL II",
+  "language": "id",
+  "sections": [
+    {
+      "id": "tujuan",
+      "heading": "Tujuan & Prinsip Dasar",
+      "content": "Panduan ini bertujuan menetapkan langkah tindak lanjut yang konsisten saat kondisi equipment berubah (Normal/Alarm/High).\n\nPrinsip Utama:\n1. Keselamatan: Pastikan panel aman sebelum pengambilan data ulang.\n2. Konsistensi: Gunakan titik ukur dan durasi yang sama untuk trending.\n3. Verifikasi: Cross-check hasil MCSA dengan vibrasi atau termografi jika memungkinkan."
+    },
+    {
+      "id": "interpretasi-rotor",
+      "heading": "Interpretasi Rotor Bar (MCSA)",
+      "content": "Analisa Sideband (dB) di sekitar frekuensi jala-jala (Line Frequency):\n\n- > -54 dB (mis. -60 dB): Kondisi BAGUS (Excellent).\n- -54 s/d -45 dB: WASPADA (Moderate). Indikasi awal retak atau high resistance joint.\n- > -45 dB (mis. -40 dB): KRITIS (Critical). Indikasi patah (broken bar) multipel.\n\nTips: Pastikan beban motor minimal 40-60% saat pengambilan data agar sideband terlihat jelas."
+    },
+    {
+      "id": "interpretasi-power",
+      "heading": "Interpretasi Kualitas Daya (Power Quality)",
+      "content": "Parameter kunci untuk Power Quality:\n\n1. Voltage Unbalance:\n   - > 1%: Waspada (bisa memicu panas berlebih).\n   - > 2%: Tinggi (derating motor diperlukan).\n\n2. Current Unbalance:\n   - > 5%: Waspada.\n   - > 10%: Tinggi (cek koneksi, kontak, atau masalah internal motor).\n\n3. THD Voltage (Harmonik):\n   - > 5%: Batas waspada IEEE 519.\n   - > 8%: Risiko tinggi kerusakan isolasi dan heating."
+    },
+    {
+      "id": "tindak-lanjut-normal",
+      "heading": "Tindak Lanjut: Kondisi NORMAL",
+      "content": "Status Hijau (Normal):\n1. Lanjutkan operasi seperti biasa.\n2. Lakukan trending rutin (mis. bulanan atau triwulanan).\n3. Simpan data sebagai baseline untuk perbandingan di masa depan."
+    },
+    {
+      "id": "tindak-lanjut-alarm",
+      "heading": "Tindak Lanjut: Kondisi ALARM (Warning)",
+      "content": "Status Kuning (Alarm/Warning):\n1. Verifikasi Data: Ambil data ulang untuk memastikan bukan kesalahan pengukuran (glitch/transien).\n2. Cek Fisik Ringan: Periksa suara, suhu bearing, dan kebersihan ventilasi.\n3. Cek Koneksi: Inspeksi visual terminal box (jika aman) atau gunakan thermography untuk deteksi loose connection.\n4. Tingkatkan Frekuensi Monitoring: Ubah interval dari bulanan menjadi mingguan.\n5. Review Beban: Pastikan motor tidak overload atau underload ekstrem."
+    },
+    {
+      "id": "tindak-lanjut-high",
+      "heading": "Tindak Lanjut: Kondisi HIGH (Critical)",
+      "content": "Status Merah (High/Critical):\n1. Lapor Segera: Informasikan ke supervisor atau tim maintenance.\n2. Analisa Komprehensif: Lakukan tes vibrasi lengkap dan MCSA detail (high resolution).\n3. Rencanakan Downtime: Siapkan spare part (bearing/motor cadangan) dan jadwal penggantian/perbaikan.\n4. Mitigasi Sementara: Jika operasi harus lanjut, pertimbangkan pengurangan beban (derating) dan pantau suhu/vibrasi secara real-time.\n5. Cek Supply: Pastikan masalah bukan dari sumber daya (mis. unbalance tegangan parah dari trafo)."
+    }
+  ]
+}
