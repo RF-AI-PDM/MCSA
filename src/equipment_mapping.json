@@ -1,0 +1,18 @@
+{
+    "PAF": "Primary Air Fan",
+    "SAF": "Secondary Air Fan",
+    "BFP": "Boiler Feed Pump",
+    "CWP": "Circulating Water Pump",
+    "IDF": "Induced Draft Fan",
+    "IDFF": "Induced Draft Fan",
+    "C3WP": "Closed Cooling Water Pump",
+    "CCWP": "Closed Cooling Water Pump",
+    "CEP": "Condensate Extraction Pump",
+    "VCP": "Vacuum Pump",
+    "WJP": "Water Jet Pump",
+    "CTF": "Cooling Tower Fan",
+    "RAF": "Rotary Ash Fan",
+    "BC": "Belt Conveyor",
+    "CRUSHER": "Crusher",
+    "RS": "Roller Screen"
+}
