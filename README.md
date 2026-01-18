@@ -1,16 +1,181 @@
-# MCSA Assistant
+# 🔧 MCSA Assistant
 
-Aplikasi ini adalah Dashboard dan Chatbot untuk analisis Motor Current Signature Analysis (MCSA).
+<p align="center">
+  <b>Dashboard & Intelligent Assistant for Motor Current Signature Analysis (MCSA)</b><br/>
+  <i>From raw current signals to actionable maintenance insight</i>
+</p>
 
-## Fitur
-1. **Dashboard**: Monitoring kondisi equipment (Normal/Alarm/High/Standby) dengan filter Unit/Voltage.
-2. **Trend**: Grafik tren parameter numerik dan status untuk parameter non-numerik (Kondisi/Bearing).
-3. **Chatbot**: Tanya jawab seputar status equipment (mis. daftar Alarm/High).
-4. **Sync Laporan Word**: Scan & sync hasil parsing laporan Word ke `mcsa_updated.csv` + ringkasan file gagal, missing parameter, dan quality check.
-5. **Rotor Bar (Hybrid)**: Hitung ulang severity rotor bar (level 1–4) dan status 3 warna (Normal/Alarm/High) berbasis sideband dB sebagai utama, dengan penguat RB Hlt Index/Se bila ada.
-6. **Performance Summary (Indonesia)**: Ambil pilihan bertanda `X` dari “Performance Summary” dan simpan sebagai parameter teks versi Indonesia.
-7. **PPT Generator**: Membuat laporan PowerPoint secara otomatis.
-8. **Materi Training**: Referensi teknis (JSON) yang dapat dicari dan dibuka dari dashboard.
+---
+
+## 🌟 Overview
+
+**MCSA Assistant** adalah aplikasi **Dashboard Analitik & Chatbot Teknis** yang dirancang khusus untuk mendukung analisis **Motor Current Signature Analysis (MCSA)** secara terstruktur, konsisten, dan siap industri.
+
+Aplikasi ini membantu engineer dan tim maintenance dalam:
+
+* Monitoring kondisi motor listrik
+* Deteksi dini fault (Rotor Bar, Bearing, Electrical Fault)
+* Standarisasi severity & status
+* Otomatisasi pelaporan teknis
+
+---
+
+## 🧩 Core Modules & Features
+
+### 📊 1. Condition Monitoring Dashboard
+
+* Status equipment:
+
+  * 🟢 Normal
+  * 🟡 High
+  * 🔴 Alarm
+  * ⚪ Standby
+* Filter dinamis:
+
+  * Unit
+  * Voltage Level
+* Tampilan ringkas untuk fleet monitoring
+
+---
+
+### 📈 2. Trend & Historical Analysis
+
+* Grafik tren untuk **parameter numerik**:
+
+  * Line Current
+  * Sideband Amplitude (dB)
+  * THD
+* Status historis untuk **parameter kategorikal**:
+
+  * Overall Condition
+  * Bearing Condition
+
+---
+
+### 🤖 3. Intelligent MCSA Chatbot
+
+* Natural language query berbasis data MCSA
+* Contoh pertanyaan:
+
+  * "Unit mana yang Alarm saat ini?"
+  * "Tampilkan semua motor dengan status High"
+  * "Ringkasan kondisi unit A"
+
+Chatbot difokuskan untuk **engineering insight**, bukan sekadar FAQ.
+
+---
+
+### 📄 4. Word Report Sync Engine
+
+* Scan & parsing laporan MCSA (*.docx*)
+* Sinkronisasi otomatis ke:
+
+  ```
+  mcsa_updated.csv
+  ```
+* Output kualitas data:
+
+  * File gagal parsing
+  * Missing parameter
+  * Validasi & quality check
+
+Mendukung standarisasi data lintas vendor & engineer.
+
+---
+
+### ⚙️ 5. Rotor Bar Analysis (Hybrid Logic)
+
+* Re-calculation **Rotor Bar Severity**:
+
+  * Level 1 – 4 (IEC-style)
+* Status visual 3 warna:
+
+  * Normal / High / Alarm
+* Logika utama:
+
+  * Sideband amplitude (dB)
+* Parameter penguat (opsional):
+
+  * Rotor Bar Health Index
+  * Slip / Se
+
+Dirancang agar **robust terhadap data tidak lengkap**.
+
+---
+
+### 📝 6. Performance Summary (Bahasa Indonesia)
+
+* Ekstraksi pilihan bertanda **`X`** dari section *Performance Summary*
+* Konversi otomatis ke:
+
+  * Parameter teks terstruktur
+  * Bahasa Indonesia
+
+Cocok untuk laporan internal & manajemen non-teknis.
+
+---
+
+### 📊 7. Automated PowerPoint Generator
+
+* Generate laporan **PowerPoint (.pptx)** otomatis
+* Berisi:
+
+  * Status unit
+  * Grafik tren
+  * Severity fault
+  * Ringkasan kondisi
+
+Menghemat waktu engineer untuk reporting.
+
+---
+
+### 📚 8. Training & Technical Knowledge Base
+
+* Referensi teknis berbasis **JSON**
+* Fitur:
+
+  * Search
+  * View langsung dari dashboard
+* Digunakan sebagai:
+
+  * Materi training
+  * Standar internal analisis MCSA
+
+---
+
+## 🏗️ Design Philosophy
+
+* ✅ Engineering-first (bukan sekadar visual)
+* ✅ Reproducible & traceable analysis
+* ✅ Vendor-agnostic
+* ✅ Siap dikembangkan ke AI-based diagnostics
+
+---
+
+## 🎯 Target Users
+
+* Reliability Engineer
+* Electrical / Rotating Equipment Engineer
+* Predictive Maintenance Team
+* Asset Management
+
+---
+
+## 🚀 Future Roadmap
+
+* Integrasi **Vibration & DGA Analysis**
+* AI-based fault recommendation
+* Confidence scoring berbasis load & data quality
+* Offline deployment (air-gapped environment)
+
+---
+
+## 📌 Notes
+
+Project ini dikembangkan sebagai **engineering framework**, bukan sekadar aplikasi dashboard.
+
+> 💡 *Built by engineers, for engineers — turning MCSA data into decisions.*
+
 
 ## Cara Instalasi
 1.  Pastikan Python sudah terinstall.
